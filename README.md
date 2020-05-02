@@ -1,4 +1,4 @@
-# apollo-graphql-typescript-mongo-boilerplate
+# apollo-graphql-typescript-mongoDB-boilerplate
 
 A boilerplate repo with Apollo server, MongoDB and Typescript
 
@@ -18,3 +18,5 @@ Dependencies:
 Files:
 
 1. tsconfig.json - This is where the TS config is customized and acts like a guide for the TS compiler with options required to compile the project.
+
+2. .eslintrc.json - Responsible for setting up the eslint configuration in the project.
