@@ -16,7 +16,9 @@ Dependencies:
 10. apollo-server-express - TS project so no types
 11. graphql + @types/graphql
 12. lodash.merge
-13. @types/lodash.merge
+13. @types/lodash.merge - dev
+14. mongodb
+15. @types/mongodb - dev
 
 Files:
 
