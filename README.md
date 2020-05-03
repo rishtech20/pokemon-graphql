@@ -15,6 +15,8 @@ Dependencies:
 9. @typescript-eslint/eslint-plugin - dev
 10. apollo-server-express - TS project so no types
 11. graphql + @types/graphql
+12. lodash.merge
+13. @types/lodash.merge
 
 Files:
 
