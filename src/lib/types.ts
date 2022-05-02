@@ -1,4 +1,3 @@
-export interface Message {
-  message: string;
-  success: boolean;
+export interface Pokemon {
+  name: string;
 }

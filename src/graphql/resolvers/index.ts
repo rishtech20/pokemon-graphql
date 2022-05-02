@@ -1,4 +1,4 @@
 import merge from "lodash.merge";
-import { messageResolver } from "./Message";
+import { pokemonResolver } from "./Pokemon";
 
-export const resolvers = merge(messageResolver);
+export const resolvers = merge(pokemonResolver);

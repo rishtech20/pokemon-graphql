@@ -1,16 +1,24 @@
 import { gql } from "apollo-server-express";
 
 export const typeDefs = gql`
-  type Message {
-    message: String!
-    success: Boolean!
+  type PokemonStats {
+    pokemons: [Pokemon!]
+    meanHeight: Float!
+    medianHeight: Float!
+    modeHeight: Float!
+    meanWeight: Float!
+    medianWeight: Float!
+    modeWeight: Float!
+  }
+
+  type Pokemon {
+    name: String!
+    weight: Int!
+    height: Int!
   }
 
   type Query {
-    helloQuery: Message!
-  }
-
-  type Mutation {
-    helloMutation: Message!
+    pokemon(name: String!): Pokemon!
+    pokemonStats(names: [String!]!): PokemonStats
   }
 `;
