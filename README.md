@@ -1,5 +1,7 @@
 # Pokemon GraphQL
 
+> Note: This repo is based on https://github.com/rishtech20/Node-GraphQL-TypeScript-Starter boilerplate
+
 #### Steps to Setup
 
 1. Clone the repo
