@@ -43,3 +43,10 @@ query {
 
 5. Each of the above queries should return an apt result with the fields being queried
 6. In case of a bad pokemon name an error should be returned to the user
+
+query -> input (2 pokemon ) -> compare attack -> winning pokemon or tie
+pokemon(opponents: ["1", "2"]) {
+winner
+}
+
+{winner: "1"}

@@ -17,8 +17,13 @@ export const typeDefs = gql`
     height: Int!
   }
 
+  type Battle {
+    winner: String!
+  }
+
   type Query {
     pokemon(name: String!): Pokemon!
     pokemonStats(names: [String!]!): PokemonStats
+    battle(opponents: [String!]!): Battle
   }
 `;

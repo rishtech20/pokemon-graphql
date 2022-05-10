@@ -28,6 +28,7 @@ export default class Pokemon {
             name: pokemon.data.name,
             height: pokemon.data.height,
             weight: pokemon.data.weight,
+            stats: pokemon.data.stats,
           }));
           return pokemons;
         })
@@ -60,5 +61,25 @@ export default class Pokemon {
     }
 
     return sortedHeights[mid];
+  }
+
+  async getWinner(opponents: [string]): Promise<string> {
+    const opponentsData = await this.getMany(opponents);
+    let opponent1Attack = opponentsData[0].stats.find(
+      (stat: { stat: { name: string } }) => {
+        return stat.stat.name === "attack";
+      }
+    );
+    let opponent2Attack = opponentsData[1].stats.find(
+      (stat: { stat: { name: string } }) => {
+        return stat.stat.name === "attack";
+      }
+    );
+
+    if (opponent1Attack.base_stat > opponent2Attack.base_stat) {
+      return opponentsData[0].name;
+    }
+
+    return opponentsData[1].name;
   }
 }

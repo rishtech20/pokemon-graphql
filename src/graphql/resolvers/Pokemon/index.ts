@@ -27,5 +27,18 @@ export const pokemonResolver: IResolvers = {
         modeHeight: pokemonService.getModeHeight(pokemons),
       };
     },
+    battle: async (
+      _root: undefined,
+      { opponents }: { opponents: [string] },
+      _ctx: undefined
+    ) => {
+      const pokemonService = new Pokemon();
+
+      const winner = await pokemonService.getWinner(opponents);
+
+      return {
+        winner,
+      };
+    },
   },
 };
